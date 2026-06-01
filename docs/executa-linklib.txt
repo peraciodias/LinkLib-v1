@@ -1,0 +1,36 @@
+  Para você usar o LinkLib no navegador, o servidor precisa ficar ligado o tempo todo.
+
+  Use estes comandos (um em cada terminal):
+
+  No Terminal 1 (Backend - Deixe rodando):
+
+   1 cd /home/pera/IdeaProjects/LinkLib-v1/backend_java
+   2 mvn compile exec:java -Dexec.mainClass="com.linklib.app.Application"
+  (Este terminal vai ficar "preso" mostrando as mensagens do servidor. Não o feche nem aperte Ctrl+C enquanto estiver usando o site).
+
+  No Terminal 2 (Frontend - Deixe rodando):
+
+   1 cd /home/pera/IdeaProjects/LinkLib-v1/frontend_ui/src
+   2 python3 -m http.server 5000
+   ou cd /home/pera/IdeaProjects/LinkLib-v1/frontend_ui/src | python3 -m http.server 5000
+  No Navegador:
+  Acesse: http://localhost:5000
+
+  ---
+  versão windows
+  terminal 1
+  1->   C:\Users\peracio>cd C:\Users\peracio\IdeaProjects\LinkLib-v1\backend_java
+  2->    mvn compile exec:java -Dexec.mainClass="com.linklib.app.Application"
+
+  terminal 2
+
+1-  cd C:\Users\peracio\IdeaProjects\LinkLib-v1\frontend_ui\src
+2-  python3 -m http.server 5000
+
+No Navegador:
+  Acesse: http://localhost:5000
+
+  Diferença importante:
+   * Se o comando tiver & e kill, ele vai desligar sozinho.
+   * Para usar o sistema, você quer o comando sem o kill, para que ele continue rodando enquanto você navega.
+

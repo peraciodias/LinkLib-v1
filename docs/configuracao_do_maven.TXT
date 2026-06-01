@@ -1,0 +1,15 @@
+
+✦ O Maven foi configurado com sucesso!
+
+  Resumo das ações:
+   1. MAVEN_HOME: Configurado para C:\Program Files\maven\apache-maven-3.9.16.
+   2. JAVA_HOME: Configurado para C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot (necessário para o Maven).
+   3. PATH: Adicionado o diretório bin do Maven às variáveis de ambiente do seu usuário.
+
+  Verificação:
+
+   1 Apache Maven 3.9.16
+   2 Maven home: C:\Program Files\maven\apache-maven-3.9.16
+   3 Java version: 21.0.10, vendor: Eclipse Adoptium
+
+  Nota: Para que as mudanças tenham efeito em outros terminais ou IDEs abertas, você precisará reiniciá-los.
