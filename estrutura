@@ -1,0 +1,82 @@
+linklib/
+│
+├─ backend-java/                     # Core em Java
+│  ├─ pom.xml                        # Maven
+│  └─ src/
+│     └─ main/
+│        ├─ java/
+│        │  └─ com/linklib/
+│        │     ├─ app/               # Inicialização do backend
+│        │     │   └─ Application.java
+│        │     │
+│        │     ├─ domain/            # Modelos do domínio
+│        │     │   ├─ Link.java
+│        │     │   ├─ Categoria.java
+│        │     │   └─ Tag.java
+│        │     │
+│        │     ├─ service/           # Regras de negócio
+│        │     │   └─ LinkService.java
+│        │     │
+│        │     ├─ repository/        # Interfaces de persistência
+│        │     │   └─ LinkRepository.java
+│        │     │
+│        │     ├─ persistence/
+│        │     │   └─ json/          # Implementação JSON
+│        │     │       └─ JsonLinkRepository.java
+│        │     │
+│        │     ├─ index/             # Índices em memória
+│        │     │   └─ LinkIndex.java
+│        │     │
+│        │     ├─ util/
+│        │     │   ├─ JsonUtil.java
+│        │     │   └─ UrlUtil.java
+│        │     │
+│        │     └─ api/               # Comunicação com UI
+│        │         └─ LinkController.java
+│        │
+│        └─ resources/
+│           └─ application.properties
+│
+├─ frontend-ui/                     # Interface TypeScript
+│  ├─ package.json
+│  ├─ tsconfig.json
+│  └─ src/
+│     ├─ main.ts                    # Inicialização da UI
+│     │
+│     ├─ components/                # Componentes visuais
+│     │   ├─ LinkCard.ts
+│     │   └─ LinkList.ts
+│     │
+│     ├─ pages/
+│     │   └─ HomePage.ts
+│     │
+│     ├─ services/                  # Comunicação com backend
+│     │   └─ LinkApi.ts
+│     │
+│     ├─ models/
+│     │   └─ Link.ts
+│     │
+│     └─ styles/
+│         └─ main.css
+│
+├─ data/                            # Dados locais do usuário
+│  ├─ links.json
+│  ├─ categorias.json
+│  └─ tags.json
+│
+├─ favicons/                        # Cache de ícones
+│  ├─ github.png
+│  └─ google.ico
+│
+├─ config/
+│  └─ config.json
+│
+├─ docs/                            # Documentação do projeto
+│  ├─ arquitetura.md
+│  └─ modelo-dados.md
+│
+├─ scripts/
+│  ├─ run-backend.sh
+│  └─ run-ui.sh
+│
+└─ README.md
