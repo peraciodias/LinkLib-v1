@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkLib</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <span class="logo">📚 LinkLib</span>
+
+    <!-- Tree dropdown -->
+    <div class="tree-wrap" id="treeWrap">
+      <button class="tree-toggle" onclick="toggleTree()">
+        <span class="tree-toggle-icon">▾</span> Biblioteca
+      </button>
+      <div class="tree-panel hidden" id="treePanel">
+        <ul class="tree" id="tree"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="theme-toggle" onclick="toggleTema()" title="Alternar tema">🌓</button>
+    <input id="urlInput" placeholder="Cole uma URL..." onkeydown="if(event.key==='Enter') abrirModalComUrl()">
+    <button onclick="abrirModalComUrl()">+ Adicionar</button>
+  </div>
+</header>
+
+<!-- Barra de contexto: mostra o nó selecionado + busca -->
+<div class="contexto-bar">
+  <span id="contexto-label">Todos os links</span>
+  <input id="buscaInput" placeholder="🔍 Buscar..." oninput="aplicarFiltro()">
+</div>
+
+<div id="app"></div>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="modal-titulo">Adicionar Link</h2>
+
+    <label>URL *</label>
+    <input id="modalUrl" placeholder="https://exemplo.com" />
+
+    <label>Título</label>
+    <input id="modalTitulo" placeholder="Nome amigável (opcional)" />
+
+    <label>Categoria</label>
+    <input id="modalCategoria" placeholder="ex: trabalho, estudos, lazer" />
+
+    <label>Tags</label>
+    <input id="modalTags" placeholder="ex: python, tutorial, referência" />
+
+    <label>Legenda</label>
+    <input id="modalLegenda" placeholder="Nota pessoal (opcional)" />
+
+    <label class="label-favorito">
+      <input type="checkbox" id="modalFavorito"> Marcar como favorito ⭐
+    </label>
+
+    <div class="modal-actions">
+      <button onclick="fecharModal()">Cancelar</button>
+      <button id="btnSalvar" onclick="salvarModal()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="main.js"></script>
+</body>
+</html>
